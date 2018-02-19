@@ -1,6 +1,9 @@
 <app-comment *ngFor='let comment of comments' [comment]="comment">
 </app-comment>
 
+<app-comment *ngFor='let comment of outBoxComment' [comment]="comment" [outbox]="true">
+</app-comment>
+
 <form class="example-form" (ngSubmit)="submit()">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Nom" name="user" [(ngModel)]="newComment.user" >

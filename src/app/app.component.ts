@@ -10,9 +10,12 @@ import { CommentsService } from './services/comments.service';
 export class AppComponent implements OnInit {
 
   comments: IComment[];
+  outBoxComment: IComment[];
   newComment: IComment = { content: '', date: null, user: '' };
   ngOnInit(): void {
+    navigator.serviceWorker.register('/sw.js');
     this.commentsService.comments$.subscribe(comments => this.comments = comments);
+    this.commentsService.outBoxComments$.subscribe(comments => this.outBoxComment = comments);
   }
 
   constructor(private commentsService: CommentsService) {

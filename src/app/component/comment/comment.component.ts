@@ -11,6 +11,9 @@ export class CommentComponent implements OnInit {
   @Input()
   comment: IComment;
 
+  @Input()
+  outbox = false;
+
   constructor() { }
 
   ngOnInit() {
