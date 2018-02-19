@@ -10,12 +10,12 @@ import { CommentsService } from './services/comments.service';
 export class AppComponent implements OnInit {
 
   comments: IComment[];
-  outBoxComment: IComment[];
+  outBoxComments: IComment[];
   newComment: IComment = { content: '', date: null, user: '' };
+
   ngOnInit(): void {
-    navigator.serviceWorker.register('/sw.js');
     this.commentsService.comments$.subscribe(comments => this.comments = comments);
-    this.commentsService.outBoxComments$.subscribe(comments => this.outBoxComment = comments);
+    this.commentsService.outBoxComments$.subscribe(comments => this.outBoxComments = comments);
   }
 
   constructor(private commentsService: CommentsService) {
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 
   submit() {
     this.newComment.date = new Date();
-    this.commentsService.postComment(this.newComment);
+    this.commentsService.postComment(this.newComment).subscribe();
     this.newComment = { content: '', date: null, user: '' };
   }
 }

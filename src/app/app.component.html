@@ -1,9 +1,15 @@
+<mat-toolbar color="primary">
+  <span><mat-icon>mood</mat-icon></span>
+
+  <span>Yay, Offline First !!</span>
+</mat-toolbar>
+<div class="comment-container">
 <app-comment *ngFor='let comment of comments' [comment]="comment">
 </app-comment>
 
-<app-comment *ngFor='let comment of outBoxComment' [comment]="comment" [outbox]="true">
+<app-comment *ngFor='let comment of outBoxComments' [comment]="comment" [outbox]="true">
 </app-comment>
-
+</div>
 <form class="example-form" (ngSubmit)="submit()">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Nom" name="user" [(ngModel)]="newComment.user" >

@@ -1,0 +1,15 @@
+.comment-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+app-comment {
+    margin: 12px;
+}
+
+.example-form {
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+}
