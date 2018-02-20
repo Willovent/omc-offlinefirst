@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CommentDb, IComment } from './commentDb';
+import { CommentDb, IComment } from './comment.db';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromPromise';
