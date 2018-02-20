@@ -6,7 +6,7 @@ import { IComment } from '../../services/comment.db';
   templateUrl: './comment.component.html',
   styleUrls: ['./comment.component.css']
 })
-export class CommentComponent implements OnInit {
+export class CommentComponent {
 
   @Input()
   comment: IComment;
@@ -15,8 +15,4 @@ export class CommentComponent implements OnInit {
   outbox = false;
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
