@@ -1,27 +1,9 @@
 # OmcOfflinefirst
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+Ce projet à pour but de montrer l'utilisation de l'api de background sync. Il ne peut donc fonctionner que sous Chrome car cette API n'est implémenté que sur ce navigateur à l'heure actuelle.
 
-## Development server
+Il s'agit d'une application Angular combiné à serveur Node.Js
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Developpement
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Pour lancer l'application, il faut utiliser la commande `ng serve` pour la partie cliente. Pour lancer le serveur, se placer dans le repertoire server et lancer la commande `node .\server.js`
