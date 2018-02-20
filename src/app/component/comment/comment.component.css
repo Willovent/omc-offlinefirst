@@ -2,3 +2,9 @@
   background-image: url('https://i.imgur.com/AvxMPIE.png');
   background-size: cover;
 }
+.pending{
+  color: orange;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
